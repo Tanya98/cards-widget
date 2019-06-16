@@ -1,0 +1,32 @@
+<div class="block-elements">
+    <div class="container" *ngIf="data; else preolder">
+
+        <app-image-card [image]="selected" class="image"></app-image-card>
+        <app-menu (changeType)="changeType($event)"></app-menu>
+
+        <div class="block-data">
+            <div class="scrollbar" id="style-1">
+
+                <ng-container>
+                <div class="block-items" *ngFor="let d of data" (click)="navClick(d)">
+                    <div class="info">
+                        <p class="title">{{d.title}}</p>
+                        <p class="address">{{d.address}}</p>
+                        <p class="phone">{{d.phone | number }}</p>
+                    </div>
+                    <div class="img">
+                        <img src="{{d.img}}" class="mini-img">
+                    </div>
+                </div>
+            </ng-container>
+            </div>
+        </div>
+    </div>
+    <div class="block-info">
+        <app-weather-card [weather]='selected.weather'></app-weather-card>
+        <app-social-card [social]="selected.social_info"></app-social-card>
+    </div>
+</div>
+<ng-template #preolder>
+    ...Loading
+</ng-template>

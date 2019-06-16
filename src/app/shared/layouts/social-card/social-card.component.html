@@ -1,0 +1,18 @@
+<div class="container" *ngIf="social;else preolder">
+    <p class="title">{{social.title}}</p>
+    <img src="{{social.img}}">
+    <div class="block-items">
+        <div class="social-info">
+            <p>{{social.followers}}</p>
+            <p class="text">Followers</p>
+        </div>
+        <div class="social-info">
+            <p>{{social.following}}</p>
+            <p class="text">Following</p>
+        </div>
+    </div>
+</div>
+
+<ng-template #preolder>
+    ...Loading
+</ng-template>

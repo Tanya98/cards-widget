@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 195px;
+    background: #5fb3f9;
+    color: white;
+    border-radius: 5px;
+
+    .block-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 50px;
+        }
+    }
+    .line {
+        background: white;
+        width: 150px;
+        height: 2px;
+    }
+
+    .title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .temp {
+        font-size: 60px;
+    }
+}
